@@ -27,13 +27,13 @@ class AttachedController extends Controller
         $accessor = $relationship->getPivotAccessor();
 
 
-        return $relationship->withPivot('id', 'answers')->get()
+        return $relationship->withPivot('id', 'answer')->get()
                     ->mapInto($field->resourceClass)
                     ->map(function($relatedResource) use ($field, $request, $accessor) {  
                         return array_merge([
                             'pivotId'   => $relatedResource->{$accessor}->id,
 							'attached'  => true,
-							'answers' => $relatedResource->{$accessor}->answer,
+							'answer' => $relatedResource->{$accessor}->answer,
                         ], $field->formatAttachableResource($request, $relatedResource));
                     })->values();  
     } 
