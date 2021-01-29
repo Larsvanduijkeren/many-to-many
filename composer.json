@@ -1,5 +1,5 @@
 {
-    "name": "armincms/many-to-many",
+    "name": "larsvanduijkeren/many-to-many",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
