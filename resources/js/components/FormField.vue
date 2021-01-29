@@ -21,7 +21,7 @@
           <span 
             @click="performEditTag(props)" 
             > 
-            {{ props.tag.text }} 
+            {{ props.tag.text }} ({{ props.tag.answer }})
 
             <svg 
               v-if="field.pivots"
