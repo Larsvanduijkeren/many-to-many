@@ -3,13 +3,11 @@
     <template slot="value" v-if="field.value && field.value.length">
       <span v-if="field.pivots"> 
       	<span  
-      		class="no-underline font-bold dim text-primary cursor-pointer"
         	v-for="(resource, index) in field.value"
         	:key="resource.id"
-        	@click="displayPivots(resource)"
         	:title="__(':resource Details', { resource: resource.text })"
         >
-          {{ resource.text }} {{ field.value.length - index - 1 ? ' , ' : '' }}
+          {{ resource.text }} ({{ resource.answer }}) {{ field.value.length - index - 1 ? ' , ' : '' }}
         </span>
       </span> 
       <span v-else>

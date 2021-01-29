@@ -155,7 +155,7 @@ abstract class ManyToMany extends Field
                 app(NovaRequest::class), new $this->resourceClass($resource)
             );
 
-            return array_merge(['pivotId' => $resource->pivot->id], $display);
+            return array_merge(['pivotId' => $resource->pivot->id, 'answer' => $resource->pivot->answer], $display);
         });
     }   
 
